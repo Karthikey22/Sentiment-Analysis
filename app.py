@@ -26,7 +26,6 @@ sentiment_tokenizer=AutoTokenizer.from_pretrained("cardiffnlp/twitter-roberta-ba
 sentiment_model=AutoModelForSequenceClassification.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment-latest")
 
 history=[]
-# input_id=1
 
 @app.post("/process",response_model=processed_text)
 def process_text(input_data: text_input):
