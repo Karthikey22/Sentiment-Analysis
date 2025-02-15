@@ -18,7 +18,11 @@ This FastAPI application provides endpoints for processing text, including summa
 
 ### Installation
 
-1.  Clone the repository (if applicable).
+1.  Clone the repository.
+    ```bash
+    git clone https://github.com/Karthikey22/Sentiment-Analysis.git
+    cd Sentiment-Analysis
+    ```
 2.  Install the required packages:
 
     ```bash
@@ -41,28 +45,18 @@ Processes the input text.
 
 ```json
 {
-  "text": "The input text to be processed."
+    "text":"Alex told food was terrible"
 }
-
-# SENTIMENT ANALYSIS
-
-This is a RESTful API built with **FastAPI** that processes text using a **pre-trained Large Language Model (LLM)**. It provides:
-- **Summarization**
-- **Named Entity Recognition (NER)**
-- **Sentiment Analysis**
-
-## 🚀 Features
-- Uses **Facebook BART** for summarization.
-- Uses **BERT-CRF** for Named Entity Recognition.
-- Uses **BERT Multilingual Sentiment** model for sentiment analysis.
-- Implements **FastAPI** for fast and easy deployment.
-
-## 📌 Endpoints
-
-### **1️⃣ Process Text**
-- **URL**: `POST /process`
-- **Request:**
+```
+**Response (JSON):**
 ```json
 {
-    "text": "The food at the restaurant was amazing!"
+    "input_text": "Alex told food was terrible",
+    "keywords": [
+        "Alex"
+    ],
+    "summary": "Alex told food was terrible. He was told it was because the food was so bad.",
+    "sentiment": "Negative"
 }
+```
+
