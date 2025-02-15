@@ -26,7 +26,7 @@ This FastAPI application provides endpoints for processing text, including summa
 2.  Install the required packages:
 
     ```bash
-    pip install fastapi uvicorn torch transformers pydantic
+    pip install -r requirements.txt
     ```
 
 3.  Download the necessary pre-trained models. The code will attempt to download them automatically upon the first run, but you might need a stable internet connection.
