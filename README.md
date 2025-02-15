@@ -32,9 +32,9 @@ This FastAPI application provides endpoints for processing text, including summa
 3.  Download the necessary pre-trained models. The code will attempt to download them automatically upon the first run, but you might need a stable internet connection.
 
 ## Running the Application
-    
+1. Run the follwoing command to start the application.
     ```bash
-    pip install -r requirements.txt
+    python .\app.py
     ```
 
 ## API Endpoints
